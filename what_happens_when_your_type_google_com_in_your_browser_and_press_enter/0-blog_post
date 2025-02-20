@@ -1,0 +1,37 @@
+What Happens When You Type google.com and Press Enter?
+The Internet. Something we’ve grown used to just having accessible without ever really thinking about how it works. But now that I’ve mentioned it, have you ever stopped and thought about how exactly it is that the process behind using the internet actually works? Or about what actually happens when you type "google.com" into your browser and hit Enter? It feels instant, but behind the scenes, a whole series of events take place to fetch and display exactly the page you are searching for.
+DNS— Domain Name System
+When you type "google.com" and press “Enter” your browser doesn’t actually understand that human-readable domain name. What it needs is an IP address like “142.250.190.14” to know precisely where to send that request.
+So, it asks a DNS (Domain Name System) server:
+Browser: Requests IP address for Google.com
+DNS: Returns the IP address
+The DNS is like the internet’s phone-book that translates human-readable website names into machine-readable IP addresses.
+TCP/IP
+Once the browser has the specific IP, it needs to establish a connection and it uses the TCP/IP (Transmission Control Protocol/Internet Protocol)—basically the guidelines that ensure data is sent and received properly. TCP breaks the webpage into a bunch of different data packets and the IP ensures these different packets get all the way to Google’s Server. Once this connection has been established, the browser then sends an HTTP request to fetch the website.
+Firewall
+Before the request get to Google’s servers, it must first pass through a firewall. Think of this as a filter that basically keeps out all the bacteria and harmful things to your system. If anything looks suspicious or harmful—like a hacker trying to mess with Google—the firewall blocks it so that the hacker cant have access.
+HTTPS/SSL
+Have you ever seen that little lock icon in your browser’s address bar? That means SSL (Secure Sockets Layer) is working. SSL encrypts (like an unsolvable puzzle that only it knows how to solve) the data between your browser and Google’s servers so that no one can intercept your search for “best pizza near me” or something like that. HTTPS (HyperText Transfer Protocol Secure) ensures that your connection is safe, preventing cyber snoops from spying on your activity.
+Load Balancer
+Google handles A LOT of requests per second, and that’s precisely why a single server can’t handle everything. That’s where a load balancer comes in to distribute all incoming traffic into multiple different servers to prevent them from overloading.
+Web Server
+Once that request reaches Google and enters the web server, the server interprets the request and it immediately delivers the static content from the HTML, CSS or images directly, or it passes the request to the application server if more processing is needed.
+Application Server
+The application server is where all of the good stuff happens. Its where all the dynamic content is processed. Like, when you type "weather in Puerto Rico" and expect a live forecast, well the Application Server basically checks: what you’re searching for, figures out how to process your request and whether it needs data from the database to actually resolve the request.
+Database
+If whatever you are requesting requires some stored information, like your past search history or bookmarked web pages, the application server queries the database to find this information. The database then retrieves all the relevant information and sends it back, this way completing the request.
+Page Load & Display
+Then, once the web server, application server, and database have all done their individual jobs, the response is sent back to your browser, rendering the webpage while combining HTML, CSS, and JavaScript to display what you see
+And just like that, in a matter of just milliseconds, a webpage called Google.com is rendered on your browser. Quite remarkable when you really think about it.
+
+So next time you hit Enter, just remember that it’s not magic, but the end result of a well-oiled machine of network protocols, security layers, and distributed systems working together.
+Here’s a quick recap:
+DNS translates the domain to an IP
+TCP/IP sets up the connection
+Firewall ensures security
+HTTPS/SSL encrypts the data
+Load Balancer distributes traffic
+Web Server serves the static content
+Application Server processes dynamic content
+Database retrieves stored information
+And all of this happens in less than a second! Crazy, right?
